@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title></title>
+<style>
+    *{margin: 0;padding: 0}
+    li{list-style-type: none;}
+    #box{
+        width:100px;
+        height:100px;
+        background: pink;
+    }
+</style>
+</head>
+<body>
+    <div id="box"></div>
+    <!--
+        当script标签规定 defer="defer" ;这个标签属性的时候，这个script标签引入js文件等到html文档加载完之后运行；
+        当script用src来引入外部js文件的时候，那么这个script标签里面就不能写代码了。
+    -->
+    <script>
+        document.getElementById("box").onclick = function () {
+            alert("1");
+        }
+    </script>
+</body>
+</html>
